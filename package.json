@@ -1,6 +1,6 @@
 {
 	"name": "local-org-git-bridge",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "This package makes it easy to sync a LocalWP site with your organisation's Git.",
 	"repository": {
 		"type": "git",
@@ -14,6 +14,8 @@
 		"create": "./dist/script.js"
 	},
 	"scripts": {
+        "build": "tsc",
+        "prepublishOnly": "tsc",
 		"start": "node ./dist/script.js"
 	},
 	"dependencies": {

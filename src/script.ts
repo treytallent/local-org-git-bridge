@@ -177,11 +177,11 @@ async function main() {
 	function createRepo(name: string, templateName: string | null = null) {
 		if (templateName) {
 			console.log(`\n🏗️  Creating ${ORG_NAME}/${name} from ${templateName}...`)
-			run(`gh repo create ${ORG_NAME}/${name} --template ${ORG_NAME}/${templateName} --public`)
+			run(`gh repo create ${ORG_NAME}/${name} --template ${ORG_NAME}/${templateName} --private`)
 			return
 		}
 		console.log(`\n🏗️  Creating ${ORG_NAME}/${name} from blank slate...`)
-		run(`gh repo create ${ORG_NAME}/${name} --public`)
+		run(`gh repo create ${ORG_NAME}/${name} --private`)
 	}
 }
 
